@@ -35,9 +35,6 @@ def msdate(self):
     self = str(datetime.datetime.fromtimestamp(self/1000.0)).split()[0]
     return self
 
-api = 'okj0Glx82UUKYDrwGxgBkzlXjrwT0dRB3I0dHD9d6ThQiDCqFPqM2lWZsa1bvXDb'
-secret = 'bmLi9tFQNDiemQw39FVlNiVKadMTDqOCQGQBHwmfkz8PB0eGCBgAG1l5nljesI96'
-
 servertime = requests.get("https://api.binance.com/api/v1/time")
 servertime = json.loads(servertime.text)
 srvrtime = servertime['serverTime']
